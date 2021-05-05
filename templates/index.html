@@ -1,7 +1,6 @@
-<!doctype html>
-<html>
+{% extends 'layout.html' %} {% block body %}
 
-<body style="font-family:arial, sans-serif">
+<div style="font-family:arial, sans-serif">
     <h1 style="background:lightblue;padding:10px">
         Plotly Chart Demo
     </h1>
@@ -11,24 +10,6 @@
     <h1><a href="chart1">Fruit in East Africa</a></h1>
     <h1><a href="chart2">Vegetables in Africa</a></h1>
 
-</body>
-<!doctype html>
-<html>
+</div>
 
-<body style="font-family:arial, sans-serif">
-    <h1>{{header}}</h1>
-    <h6><a href="/">Return to index page</a></h6>
-    <div id="chart" class="chart"></div>
-    <div>{{description}}</div>
-</body>
-
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script type="text/javascript">
-    var graphs = {{graphJSON | safe}};
-    Plotly.plot('chart', graphs, {});
-</script>
-
-</html>
-
-
-</html>
+{% endblock %}

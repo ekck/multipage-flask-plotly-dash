@@ -27,7 +27,7 @@ def chart1():
     An academic study of the number of apples, oranges and bananas in the cities of
     East Africa.
     """
-    return render_template('multipage.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('multipage.html.jinja', graphJSON=graphJSON, header=header,description=description)
 
 @app.route('/chart2')
 def chart2():
@@ -46,3 +46,6 @@ def chart2():
     """
     return render_template('multipage.html', graphJSON=graphJSON, header=header,description=description)
 
+if __name__=='__main__':
+    app.secret_key='1234'
+    app.run(debug=True)
